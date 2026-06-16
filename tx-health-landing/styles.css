@@ -1,0 +1,105 @@
+/* TX Health Growth - High Fidelity UI */
+
+:root {
+    --brand-dark: #020817;
+    --brand-turquoise: #00F5D4;
+    --brand-blue: #00C2FF;
+    --brand-purple: #7C3AED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--brand-dark);
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Typography Customizations */
+.tracking-tight-custom {
+    letter-spacing: -0.05em;
+}
+
+.gradient-text-turquoise {
+    background: linear-gradient(135deg, #00F5D4 0%, #00C2FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Refined */
+.glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Duotone / Image Filters */
+.duotone {
+    position: relative;
+    overflow: hidden;
+}
+
+.duotone img {
+    filter: grayscale(100%) contrast(1.2) brightness(0.8);
+    transition: transform 0.5s ease;
+}
+
+.duotone:hover img {
+    transform: scale(1.05);
+}
+
+.duotone::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 245, 212, 0.25), rgba(0, 194, 255, 0.25));
+    mix-blend-mode: color;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes bounceSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-slow {
+    animation: bounceSlow 4s infinite ease-in-out;
+}
+
+.shadow-neon {
+    text-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+}
+
+/* Transitions */
+.transition-all {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--brand-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-turquoise);
+}
