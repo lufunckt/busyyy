@@ -1,0 +1,11 @@
+{
+  "name": "tx-health-growth-lp",
+  "version": "1.0.0",
+  "description": "TX Health Growth High-Fidelity Landing Page",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
